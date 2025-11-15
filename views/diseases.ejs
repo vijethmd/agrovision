@@ -1,0 +1,135 @@
+<% 
+    const pageData = {
+        title: "Disease Library",
+        currentPage: "diseases"
+    }
+%>
+
+<!-- <%- include('layout', pageData) -%> -->
+
+<section class="diseases-library">
+    <div class="container">
+        <div class="section-title">
+            <h2>Crop Disease Library</h2>
+            <p>Comprehensive information about common crop diseases and their identification</p>
+        </div>
+        
+        <div class="search-filter">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search diseases..." id="diseaseSearch">
+            </div>
+            <div class="filter-options">
+                <select id="cropFilter">
+                    <option value="">All Crops</option>
+                    <option value="tomato">Tomato</option>
+                    <option value="potato">Potato</option>
+                    <option value="corn">Corn</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                </select>
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="fungal">Fungal</option>
+                    <option value="bacterial">Bacterial</option>
+                    <option value="viral">Viral</option>
+                    <option value="pest">Pest-related</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="diseases-grid">
+            <% const diseases = [
+                {
+                    name: "Late Blight",
+                    crop: "Tomato, Potato",
+                    type: "Fungal",
+                    image: "/images/late-blight.jpg",
+                    severity: "High",
+                    description: "A devastating fungal disease that can destroy entire crops within days under favorable conditions.",
+                    symptoms: ["Water-soaked lesions", "White mold growth", "Rapid tissue decay"]
+                },
+                {
+                    name: "Powdery Mildew",
+                    crop: "Various",
+                    type: "Fungal",
+                    image: "/images/powdery-mildew.jpg",
+                    severity: "Medium",
+                    description: "Characterized by white powdery spots on leaves and stems, reducing photosynthesis.",
+                    symptoms: ["White powdery spots", "Leaf yellowing", "Stunted growth"]
+                },
+                {
+                    name: "Leaf Spot",
+                    crop: "Various",
+                    type: "Fungal/Bacterial",
+                    image: "/images/leaf-spot.jpg",
+                    severity: "Medium",
+                    description: "Circular or irregular spots on leaves that can lead to defoliation and reduced yield.",
+                    symptoms: ["Circular spots", "Yellow halos", "Leaf drop"]
+                },
+                {
+                    name: "Bacterial Blight",
+                    crop: "Rice, Cotton",
+                    type: "Bacterial",
+                    image: "/images/bacterial-blight.jpg",
+                    severity: "High",
+                    description: "Causes water-soaked lesions that turn brown and can kill young plants.",
+                    symptoms: ["Water-soaked lesions", "Yellow borders", "Leaf wilting"]
+                },
+                {
+                    name: "Root Rot",
+                    crop: "Various",
+                    type: "Fungal",
+                    image: "/images/root-rot.jpg",
+                    severity: "High",
+                    description: "Affects root systems, leading to plant wilting and death despite adequate watering.",
+                    symptoms: ["Root discoloration", "Plant wilting", "Stunted growth"]
+                },
+                {
+                    name: "Mosaic Virus",
+                    crop: "Various",
+                    type: "Viral",
+                    image: "/images/mosaic-virus.jpg",
+                    severity: "Medium",
+                    description: "Causes mosaic patterns of light and dark green on leaves, reducing plant vigor.",
+                    symptoms: ["Mosaic patterns", "Leaf distortion", "Reduced yield"]
+                }
+            ] %>
+            
+            <% diseases.forEach(disease => { %>
+                <div class="disease-item" data-crop="<%= disease.crop.toLowerCase() %>" data-type="<%= disease.type.toLowerCase() %>">
+                    <div class="disease-image">
+                        <img src="<%= disease.image %>" alt="<%= disease.name %>">
+                        <div class="severity-badge severity-<%= disease.severity.toLowerCase() %>">
+                            <%= disease.severity %> Severity
+                        </div>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-meta">
+                            <span class="crop-type"><i class="fas fa-leaf"></i> <%= disease.crop %></span>
+                            <span class="disease-type"><i class="fas fa-virus"></i> <%= disease.type %></span>
+                        </div>
+                        <h3><%= disease.name %></h3>
+                        <p><%= disease.description %></p>
+                        <div class="symptoms">
+                            <h4>Common Symptoms:</h4>
+                            <ul>
+                                <% disease.symptoms.forEach(symptom => { %>
+                                    <li><i class="fas fa-check-circle"></i> <%= symptom %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <div class="disease-actions">
+                            <a href="/detect" class="btn btn-small">
+                                <i class="fas fa-camera"></i> Detect
+                            </a>
+                            <a href="/solutions/<%= disease.name.toLowerCase().replace(' ', '-') %>" class="btn btn-outline btn-small">
+                                <i class="fas fa-lightbulb"></i> Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

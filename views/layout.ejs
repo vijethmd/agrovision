@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title + ' - AgroVision' : 'AgroVision - Crop Disease Detection' %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgroVision</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="/" class="<%= typeof currentPage !== 'undefined' && currentPage === 'home' ? 'active' : '' %>">Home</a>
+                    <a href="/detect" class="<%= typeof currentPage !== 'undefined' && currentPage === 'detect' ? 'active' : '' %>">Detect Disease</a>
+                    <a href="/diseases" class="<%= typeof currentPage !== 'undefined' && currentPage === 'diseases' ? 'active' : '' %>">Diseases</a>
+                    <a href="/solutions" class="<%= typeof currentPage !== 'undefined' && currentPage === 'solutions' ? 'active' : '' %>">Solutions</a>
+                    <a href="/about" class="<%= typeof currentPage !== 'undefined' && currentPage === 'about' ? 'active' : '' %>">About</a>
+                    <a href="/contact" class="<%= typeof currentPage !== 'undefined' && currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+                </div>
+                
+                <div class="auth-buttons">
+                    <% if (typeof user !== 'undefined' && user) { %>
+                        <a href="/dashboard" class="btn btn-outline"><i class="fas fa-user"></i> Dashboard</a>
+                        <a href="/logout" class="btn">Logout</a>
+                    <% } else { %>
+                        <a href="/login" class="btn btn-outline">Login</a>
+                        <a href="/register" class="btn">Sign Up</a>
+                    <% } %>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <%- typeof content !== 'undefined' ? content : '' %>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AgroVision</h3>
+                    <p>Using AI to protect crops and secure food supply for communities worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/detect">Detect Disease</a></li>
+                        <li><a href="/diseases">Disease Library</a></li>
+                        <li><a href="/solutions">Solutions</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Diseases</h3>
+                    <ul class="footer-links">
+                        <li><a href="/diseases/late-blight">Late Blight</a></li>
+                        <li><a href="/diseases/powdery-mildew">Powdery Mildew</a></li>
+                        <li><a href="/diseases/leaf-spot">Leaf Spot</a></li>
+                        <li><a href="/diseases/bacterial-blight">Bacterial Blight</a></li>
+                        <li><a href="/diseases/root-rot">Root Rot</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agriculture City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@agrovision.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 AgroVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

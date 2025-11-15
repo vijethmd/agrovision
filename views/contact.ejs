@@ -1,0 +1,147 @@
+<% 
+    const pageData = {
+        title: "Contact Us",
+        currentPage: "contact"
+    }
+%>
+
+<!-- <%- include('layout', pageData) -%> -->
+
+<section class="contact-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>We're here to help with any questions about crop diseases or our platform</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Visit Our Office</h3>
+                        <p>N.18, Ashwa Towers<br>Indiranagar, Bengaluru 560023<br>India</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Call Us</h3>
+                        <p>General Inquiries: +91 10000 10000<br>Emergency Support: +91 20000 20000</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Us</h3>
+                        <p>General: info@agrovision.com<br>Support: support@agrovision.com<br>Partnerships: partners@agrovision.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-notice">
+                    <div class="emergency-alert">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>Emergency Crop Disease Outbreak?</h4>
+                            <p>Call our 24/7 emergency hotline: <strong>+1 (555) 123-EMER</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Inquiry Category *</label>
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="">Select a category</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="disease">Disease Identification Help</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Product Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachment">Attachment (Optional)</label>
+                        <input type="file" id="attachment" name="attachment" class="form-control">
+                        <small>Upload images of affected crops for better assistance (Max 10MB)</small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How accurate is the disease detection?</h3>
+                    <p>Our CNN model achieves over 95% accuracy for common crop diseases when provided with clear, well-lit images of affected plant parts.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What crops do you support?</h3>
+                    <p>We currently support 50+ major crops including tomatoes, potatoes, corn, wheat, rice, and various fruits and vegetables.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is my data secure?</h3>
+                    <p>Yes, we take data privacy seriously. Your images and analysis results are encrypted and stored securely. We don't share your data with third parties.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer mobile apps?</h3>
+                    <p>Yes, we have mobile apps for both iOS and Android that work offline for field use and sync when connectivity is available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

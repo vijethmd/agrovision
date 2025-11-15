@@ -1,0 +1,100 @@
+<section class="dashboard-section">
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Welcome back, <%= user.name %>!</h1>
+            <p>Here's your crop health overview</p>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>12</h3>
+                    <p>Images Analyzed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>3</h3>
+                    <p>Diseases Detected</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>9</h3>
+                    <p>Healthy Crops</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>92%</h3>
+                    <p>Accuracy Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-actions">
+            <div class="action-card">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <a href="/detect" class="btn btn-primary">
+                        <i class="fas fa-camera"></i>
+                        Detect New Disease
+                    </a>
+                    <a href="/diseases" class="btn btn-outline">
+                        <i class="fas fa-book"></i>
+                        Browse Diseases
+                    </a>
+                    <a href="/solutions" class="btn btn-outline">
+                        <i class="fas fa-lightbulb"></i>
+                        View Solutions
+                    </a>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon success">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>Tomato leaf analyzed - No disease detected</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>Late Blight detected in potato crop</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon success">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>Corn plant analyzed - Healthy</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
