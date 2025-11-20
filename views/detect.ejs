@@ -1,139 +1,139 @@
-<!-- <% 
-    const pageData = {
-        title: "Detect Disease",
-        currentPage: "detect"
-    }
-%> -->
-
-<!-- <%- include('layout', pageData) -%> -->
-
 <section class="detection-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Detect Crop Disease</h2>
-            <p>Upload an image of your crop and our AI will analyze it for potential diseases</p>
-        </div>
-        
-        <div class="upload-container">
-            <div class="upload-area" id="uploadArea">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <h3>Upload Crop Image</h3>
-                <p>Drag & drop your image here or click to browse</p>
-                <p class="upload-note">Supported formats: JPG, PNG, JPEG (Max 5MB)</p>
-                <input type="file" class="file-input" id="fileInput" accept="image/*">
-            </div>
-            
-            <div class="preview-container" id="previewContainer">
-                <img src="" alt="Preview" class="preview-image" id="previewImage">
-                <div class="preview-actions">
-                    <button class="btn analyze-btn" id="analyzeBtn">
-                        <i class="fas fa-search"></i> Analyze Image
-                    </button>
-                    <button class="btn btn-outline" id="changeImageBtn">
-                        <i class="fas fa-redo"></i> Change Image
-                    </button>
-                </div>
-            </div>
-            
-            <div class="result-container" id="resultContainer">
-                <h3><i class="fas fa-clipboard-check"></i> Analysis Results</h3>
-                
-                <div class="result-summary">
-                    <div class="confidence-level">
-                        <div class="confidence-label">Overall Confidence</div>
-                        <div class="confidence-score">92%</div>
-                    </div>
-                    <div class="crop-info">
-                        <div class="info-item">
-                            <span class="info-label">Crop Type:</span>
-                            <span class="info-value">Tomato</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Plant Part:</span>
-                            <span class="info-value">Leaf</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="disease-results">
-                    <h4>Detected Diseases:</h4>
-                    
-                    <div class="disease-card">
-                        <div class="disease-name">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            Late Blight
-                        </div>
-                        <div class="confidence">
-                            <span class="confidence-label">Confidence:</span>
-                            <div class="confidence-bar">
-                                <div class="confidence-fill" style="width: 92%"></div>
-                            </div>
-                            <span class="confidence-value">92%</span>
-                        </div>
-                        <div class="disease-description">
-                            <p>A serious fungal disease that affects tomatoes and potatoes, causing rapid plant destruction.</p>
-                        </div>
-                        <a href="/solutions/late-blight" class="btn btn-accent btn-small">
-                            <i class="fas fa-lightbulb"></i> View Solutions
-                        </a>
-                    </div>
-                    
-                    <div class="disease-card">
-                        <div class="disease-name">
-                            <i class="fas fa-info-circle"></i>
-                            Early Blight
-                        </div>
-                        <div class="confidence">
-                            <span class="confidence-label">Confidence:</span>
-                            <div class="confidence-bar">
-                                <div class="confidence-fill" style="width: 45%"></div>
-                            </div>
-                            <span class="confidence-value">45%</span>
-                        </div>
-                        <div class="disease-description">
-                            <p>A common fungal disease characterized by concentric rings on leaves.</p>
-                        </div>
-                        <a href="/solutions/early-blight" class="btn btn-outline btn-small">
-                            <i class="fas fa-lightbulb"></i> View Solutions
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download Report
-                    </button>
-                    <button class="btn">
-                        <i class="fas fa-history"></i> Analyze Another Image
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="detection-tips">
-            <h3><i class="fas fa-tips"></i> Tips for Better Detection</h3>
-            <div class="tips-grid">
-                <div class="tip-item">
-                    <i class="fas fa-camera"></i>
-                    <h4>Good Lighting</h4>
-                    <p>Take photos in natural daylight for best results</p>
-                </div>
-                <div class="tip-item">
-                    <i class="fas fa-ruler-combined"></i>
-                    <h4>Close Up</h4>
-                    <p>Focus on the affected area of the plant</p>
-                </div>
-                <div class="tip-item">
-                    <i class="fas fa-background"></i>
-                    <h4>Clean Background</h4>
-                    <p>Use a neutral background to avoid confusion</p>
-                </div>
-                <div class="tip-item">
-                    <i class="fas fa-images"></i>
-                    <h4>Multiple Angles</h4>
-                    <p>Take photos from different angles if possible</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Detect Crop Disease</h2>
+      <p>
+        Upload an image of your crop and our AI will analyze it for potential
+        diseases
+      </p>
     </div>
+
+    <div class="upload-container">
+      <div class="upload-area" id="uploadArea">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <h3>Upload Crop Image</h3>
+        <p>Drag & drop your image here or click to browse</p>
+        <p class="upload-note">Supported formats: JPG, PNG, JPEG (Max 5MB)</p>
+        <input type="file" class="file-input" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="preview-container" id="previewContainer">
+        <img src="" alt="Preview" class="preview-image" id="previewImage" />
+        <div class="preview-actions">
+          <button class="btn analyze-btn" id="analyzeBtn">
+            <i class="fas fa-search"></i> Analyze Image
+          </button>
+          <button class="btn btn-outline" id="changeImageBtn">
+            <i class="fas fa-redo"></i> Change Image
+          </button>
+        </div>
+      </div>
+
+      <div class="result-container" id="resultContainer">
+        <h3><i class="fas fa-clipboard-check"></i> Analysis Results</h3>
+
+        <div class="result-summary">
+          <div class="confidence-level">
+            <div class="confidence-label">Overall Confidence</div>
+            <div class="confidence-score">92%</div>
+          </div>
+          <div class="crop-info">
+            <div class="info-item">
+              <span class="info-label">Crop Type:</span>
+              <span class="info-value">Tomato</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Plant Part:</span>
+              <span class="info-value">Leaf</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="disease-results">
+          <h4>Detected Diseases:</h4>
+
+          <div class="disease-card">
+            <div class="disease-name">
+              <i class="fas fa-exclamation-triangle"></i>
+              Late Blight
+            </div>
+            <div class="confidence">
+              <span class="confidence-label">Confidence:</span>
+              <div class="confidence-bar">
+                <div class="confidence-fill" style="width: 92%"></div>
+              </div>
+              <span class="confidence-value">92%</span>
+            </div>
+            <div class="disease-description">
+              <p>
+                A serious fungal disease that affects tomatoes and potatoes,
+                causing rapid plant destruction.
+              </p>
+            </div>
+            <a href="/solutions/late-blight" class="btn btn-accent btn-small">
+              <i class="fas fa-lightbulb"></i> View Solutions
+            </a>
+          </div>
+
+          <div class="disease-card">
+            <div class="disease-name">
+              <i class="fas fa-info-circle"></i>
+              Early Blight
+            </div>
+            <div class="confidence">
+              <span class="confidence-label">Confidence:</span>
+              <div class="confidence-bar">
+                <div class="confidence-fill" style="width: 45%"></div>
+              </div>
+              <span class="confidence-value">45%</span>
+            </div>
+            <div class="disease-description">
+              <p>
+                A common fungal disease characterized by concentric rings on
+                leaves.
+              </p>
+            </div>
+            <a href="/solutions/early-blight" class="btn btn-outline btn-small">
+              <i class="fas fa-lightbulb"></i> View Solutions
+            </a>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-secondary">
+            <i class="fas fa-download"></i> Download Report
+          </button>
+          <button class="btn">
+            <i class="fas fa-history"></i> Analyze Another Image
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="detection-tips">
+      <h3><i class="fas fa-tips"></i> Tips for Better Detection</h3>
+      <div class="tips-grid">
+        <div class="tip-item">
+          <i class="fas fa-camera"></i>
+          <h4>Good Lighting</h4>
+          <p>Take photos in natural daylight for best results</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-ruler-combined"></i>
+          <h4>Close Up</h4>
+          <p>Focus on the affected area of the plant</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-background"></i>
+          <h4>Clean Background</h4>
+          <p>Use a neutral background to avoid confusion</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-images"></i>
+          <h4>Multiple Angles</h4>
+          <p>Take photos from different angles if possible</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

@@ -1,146 +1,145 @@
-<% 
-    const pageData = {
-        title: "Treatment Solutions",
-        currentPage: "solutions"
-    }
-%>
-
-<!-- <%- include('layout', pageData) -%> -->
-
 <section class="solutions-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Disease Treatment Solutions</h2>
-            <p>Effective strategies and treatments for common crop diseases</p>
-        </div>
-        
-        <div class="solutions-categories">
-            <div class="category-nav">
-                <button class="category-btn active" data-category="all">All Solutions</button>
-                <button class="category-btn" data-category="prevention">Prevention</button>
-                <button class="category-btn" data-category="organic">Organic</button>
-                <button class="category-btn" data-category="chemical">Chemical</button>
-                <button class="category-btn" data-category="cultural">Cultural</button>
-            </div>
-            
-            <div class="solutions-content">
-                <div class="solution-item" data-categories="prevention cultural">
-                    <div class="solution-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="solution-content">
-                        <h3>Use Resistant Varieties</h3>
-                        <p>Plant disease-resistant crop varieties adapted to your region.</p>
-                        <div class="solution-meta">
-                            <span class="applicable-crops">Tomato, Potato, Corn</span>
-                            <span class="effectiveness">High Effectiveness</span>
-                        </div>
-                        <ul class="solution-steps">
-                            <li>Research resistant varieties for your area</li>
-                            <li>Purchase certified disease-free seeds</li>
-                            <li>Rotate resistant varieties periodically</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="solution-item" data-categories="organic prevention">
-                    <div class="solution-icon">
-                        <i class="fas fa-retweet"></i>
-                    </div>
-                    <div class="solution-content">
-                        <h3>Crop Rotation</h3>
-                        <p>Rotate crops to break disease cycles and reduce pathogen buildup.</p>
-                        <div class="solution-meta">
-                            <span class="applicable-crops">All Crops</span>
-                            <span class="effectiveness">Medium Effectiveness</span>
-                        </div>
-                        <ul class="solution-steps">
-                            <li>Plan 3-4 year rotation cycles</li>
-                            <li>Avoid planting related crops consecutively</li>
-                            <li>Include cover crops in rotation</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="solution-item" data-categories="organic chemical">
-                    <div class="solution-icon">
-                        <i class="fas fa-spray-can"></i>
-                    </div>
-                    <div class="solution-content">
-                        <h3>Neem Oil Application</h3>
-                        <p>Use neem oil as a natural fungicide and insecticide.</p>
-                        <div class="solution-meta">
-                            <span class="applicable-crops">Vegetables, Fruits</span>
-                            <span class="effectiveness">Medium Effectiveness</span>
-                        </div>
-                        <ul class="solution-steps">
-                            <li>Mix 2-5ml neem oil per liter of water</li>
-                            <li>Add a few drops of soap as emulsifier</li>
-                            <li>Spray every 7-14 days as prevention</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="solution-item" data-categories="chemical">
-                    <div class="solution-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <div class="solution-content">
-                        <h3>Fungicide Application</h3>
-                        <p>Use appropriate fungicides for specific fungal diseases.</p>
-                        <div class="solution-meta">
-                            <span class="applicable-crops">Tomato, Potato, Grapes</span>
-                            <span class="effectiveness">High Effectiveness</span>
-                        </div>
-                        <ul class="solution-steps">
-                            <li>Identify the specific fungal pathogen</li>
-                            <li>Choose targeted fungicide</li>
-                            <li>Follow label instructions carefully</li>
-                            <li>Rotate fungicide classes to prevent resistance</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="solution-item" data-categories="cultural prevention">
-                    <div class="solution-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="solution-content">
-                        <h3>Proper Water Management</h3>
-                        <p>Manage irrigation to reduce leaf wetness and humidity.</p>
-                        <div class="solution-meta">
-                            <span class="applicable-crops">All Crops</span>
-                            <span class="effectiveness">High Effectiveness</span>
-                        </div>
-                        <ul class="solution-steps">
-                            <li>Water early in the day</li>
-                            <li>Use drip irrigation instead of overhead</li>
-                            <li>Avoid overwatering</li>
-                            <li>Ensure proper drainage</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="emergency-contact">
-            <div class="emergency-card">
-                <div class="emergency-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="emergency-content">
-                    <h3>Need Immediate Help?</h3>
-                    <p>Contact our agricultural experts for urgent disease outbreaks</p>
-                    <div class="emergency-contacts">
-                        <a href="tel:+15551234567" class="btn btn-accent">
-                            <i class="fas fa-phone"></i> Call Expert: +1 (555) 123-4567
-                        </a>
-                        <a href="mailto:emergency@agrovision.com" class="btn btn-outline">
-                            <i class="fas fa-envelope"></i> Email Support
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Disease Treatment Solutions</h2>
+      <p>Effective strategies and treatments for common crop diseases</p>
     </div>
+
+    <div class="solutions-categories">
+      <div class="category-nav">
+        <button class="category-btn active" data-category="all">
+          All Solutions
+        </button>
+        <button class="category-btn" data-category="prevention">
+          Prevention
+        </button>
+        <button class="category-btn" data-category="organic">Organic</button>
+        <button class="category-btn" data-category="chemical">Chemical</button>
+        <button class="category-btn" data-category="cultural">Cultural</button>
+      </div>
+
+      <div class="solutions-content">
+        <div class="solution-item" data-categories="prevention cultural">
+          <div class="solution-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="solution-content">
+            <h3>Use Resistant Varieties</h3>
+            <p>
+              Plant disease-resistant crop varieties adapted to your region.
+            </p>
+            <div class="solution-meta">
+              <span class="applicable-crops">Tomato, Potato, Corn</span>
+              <span class="effectiveness">High Effectiveness</span>
+            </div>
+            <ul class="solution-steps">
+              <li>Research resistant varieties for your area</li>
+              <li>Purchase certified disease-free seeds</li>
+              <li>Rotate resistant varieties periodically</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-item" data-categories="organic prevention">
+          <div class="solution-icon">
+            <i class="fas fa-retweet"></i>
+          </div>
+          <div class="solution-content">
+            <h3>Crop Rotation</h3>
+            <p>
+              Rotate crops to break disease cycles and reduce pathogen buildup.
+            </p>
+            <div class="solution-meta">
+              <span class="applicable-crops">All Crops</span>
+              <span class="effectiveness">Medium Effectiveness</span>
+            </div>
+            <ul class="solution-steps">
+              <li>Plan 3-4 year rotation cycles</li>
+              <li>Avoid planting related crops consecutively</li>
+              <li>Include cover crops in rotation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-item" data-categories="organic chemical">
+          <div class="solution-icon">
+            <i class="fas fa-spray-can"></i>
+          </div>
+          <div class="solution-content">
+            <h3>Neem Oil Application</h3>
+            <p>Use neem oil as a natural fungicide and insecticide.</p>
+            <div class="solution-meta">
+              <span class="applicable-crops">Vegetables, Fruits</span>
+              <span class="effectiveness">Medium Effectiveness</span>
+            </div>
+            <ul class="solution-steps">
+              <li>Mix 2-5ml neem oil per liter of water</li>
+              <li>Add a few drops of soap as emulsifier</li>
+              <li>Spray every 7-14 days as prevention</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-item" data-categories="chemical">
+          <div class="solution-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="solution-content">
+            <h3>Fungicide Application</h3>
+            <p>Use appropriate fungicides for specific fungal diseases.</p>
+            <div class="solution-meta">
+              <span class="applicable-crops">Tomato, Potato, Grapes</span>
+              <span class="effectiveness">High Effectiveness</span>
+            </div>
+            <ul class="solution-steps">
+              <li>Identify the specific fungal pathogen</li>
+              <li>Choose targeted fungicide</li>
+              <li>Follow label instructions carefully</li>
+              <li>Rotate fungicide classes to prevent resistance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-item" data-categories="cultural prevention">
+          <div class="solution-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <div class="solution-content">
+            <h3>Proper Water Management</h3>
+            <p>Manage irrigation to reduce leaf wetness and humidity.</p>
+            <div class="solution-meta">
+              <span class="applicable-crops">All Crops</span>
+              <span class="effectiveness">High Effectiveness</span>
+            </div>
+            <ul class="solution-steps">
+              <li>Water early in the day</li>
+              <li>Use drip irrigation instead of overhead</li>
+              <li>Avoid overwatering</li>
+              <li>Ensure proper drainage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="emergency-contact">
+      <div class="emergency-card">
+        <div class="emergency-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="emergency-content">
+          <h3>Need Immediate Help?</h3>
+          <p>Contact our agricultural experts for urgent disease outbreaks</p>
+          <div class="emergency-contacts">
+            <a href="tel:+15551234567" class="btn btn-accent">
+              <i class="fas fa-phone"></i> Call Expert: +1 (555) 123-4567
+            </a>
+            <a href="mailto:emergency@agrovision.com" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Email Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
