@@ -218,10 +218,68 @@ app.post('/detect', upload.single('cropImage'), (req, res) => {
 });
 
 app.get('/diseases', (req, res) => {
+  const diseases = [
+    {
+      name: "Late Blight",
+      crop: "Tomato, Potato",
+      type: "Fungal",
+      image: "/images/late-blight.jpg",
+      severity: "High",
+      description: "A devastating fungal disease that can destroy entire crops within days under favorable conditions.",
+      symptoms: ["Water-soaked lesions", "White mold growth", "Rapid tissue decay"]
+    },
+    {
+      name: "Powdery Mildew",
+      crop: "Various",
+      type: "Fungal",
+      image: "/images/powdery-mildew.jpg",
+      severity: "Medium",
+      description: "Characterized by white powdery spots on leaves and stems, reducing photosynthesis.",
+      symptoms: ["White powdery spots", "Leaf yellowing", "Stunted growth"]
+    },
+    {
+      name: "Leaf Spot",
+      crop: "Various",
+      type: "Fungal/Bacterial",
+      image: "/images/leaf-spot.jpg",
+      severity: "Medium",
+      description: "Circular or irregular spots on leaves that can lead to defoliation and reduced yield.",
+      symptoms: ["Circular spots", "Yellow halos", "Leaf drop"]
+    },
+    {
+      name: "Bacterial Blight",
+      crop: "Rice, Cotton",
+      type: "Bacterial",
+      image: "/images/bacterial-blight.jpg",
+      severity: "High",
+      description: "Causes water-soaked lesions that turn brown and can kill young plants.",
+      symptoms: ["Water-soaked lesions", "Yellow borders", "Leaf wilting"]
+    },
+    {
+      name: "Root Rot",
+      crop: "Various",
+      type: "Fungal",
+      image: "/images/root-rot.jpg",
+      severity: "High",
+      description: "Affects root systems, leading to plant wilting and death despite adequate watering.",
+      symptoms: ["Root discoloration", "Plant wilting", "Stunted growth"]
+    },
+    {
+      name: "Mosaic Virus",
+      crop: "Various",
+      type: "Viral",
+      image: "/images/mosaic-virus.jpg",
+      severity: "Medium",
+      description: "Causes mosaic patterns of light and dark green on leaves, reducing plant vigor.",
+      symptoms: ["Mosaic patterns", "Leaf distortion", "Reduced yield"]
+    }
+  ];
+
   renderPage(res, 'diseases', {
     title: 'Disease Library',
     currentPage: 'diseases',
-    user: null
+    user: null,
+    diseases: diseases
   });
 });
 
